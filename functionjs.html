@@ -32,6 +32,17 @@
         console.log(finalresult);
         let finalresult1=num.reduce((total,n)=>total+n);
         console.log(finalresult1);
+        async function userdata(){
+            try{
+                let data=await fetch('https://dummyjson.com/products');
+                let Updateddata=await data.json();
+                console.log(Updateddata);
+            }
+            catch(error){
+                console.error("Error fetching user data:", error);
+            }
+        }
+        userdata();
     </script>
 </body>
 </html>
