@@ -43,6 +43,14 @@
             }
         }
         userdata();
+        let userinfo={
+            name:"John",
+            age:30,
+            city:"New York"
+        }
+        localStorage.setItem('preferences', JSON.stringify(userinfo));
+        let storagepreferences=JSON.parse(localStorage.getItem('preferences'));
+        console.log(storagepreferences.name);
     </script>
 </body>
 </html>
